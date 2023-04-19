@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html, body {
+  width:420px; background-color:#1b365f; color: #fff;
+  font-size: 12px;
+}
+
+.text-primary           {color: #5867dd;}
+.text-secondary         {color: #e1e1ef;}
+.text-success           {color: #1dc9b7;}
+.text-danger            {color: #fd397a;}
+.text-warning           {color: #ffb822;}
+.text-info              {color: #5578eb;}
+.text-light             {color: #f8f9fa;}
+.text-dark              {color: #343a40;}
+.text-punks-gold        {color: #f6b611;}
+.text-machinelands      {color: #2bff24;}
+
+.bg-primary             {background-color: #5867dd;}
+.bg-secondary           {background-color: #e1e1ef;}
+.bg-success             {background-color: #1dc9b7;}
+.bg-danger              {background-color: #fd397a;}
+.bg-warning             {background-color: #ffb822;}
+.bg-info                {background-color: #5578eb;}
+.bg-light               {background-color: #f8f9fa;}
+.bg-dark                {background-color: #343a40;}
+.bg-punks               {background-color: #8907b5;}
+.bg-punks-2             {background-color: #3f83f8;}
+.bg-machinelands        {background-color: #2bff24;}
+.bg-machinel-outline    {background-color: #6324bd;}
+.bg-mimo                {background-color: #00e100;}
+
+.font-14 { font-size:14px; }
+.font-18 { font-size:18px; }
+
+a { color:#5578eb; }
+
+.hidden {display:none;}
+.visible {display:block;}
+
+.text-bold   {font-weight: bold;}
+.text-bolder {font-weight: bolder;}
+
+.button {
+    padding: 4px 15px 6px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.button i {margin-right: 5px; font-size: 1.2em;}
+.button.outline { border: 1px solid; }
+.button:hover {opacity: 0.6; cursor: pointer; }
+
+.input-numbers { width:60px; }
+</style>
+</head>
+<body>
+
+<h1 style="margin-top:0px;">IoTeX Punks / Marketplace</h1>
+<p class="font-14">
+<input type="number" class="input-numbers" id="ExchangeRateIOP" value=""> IOP Price in $USD<br />
+<input type="number" class="input-numbers" id="ExchangeRateIOTX" value=""> IOTX Price in $USD<br />
+<input type="number" class="input-numbers" id="MarketplaceFloorPriceIOTX" value="2500"> Marketplace Floor Price in IOTX<br />
+<input type="number" class="input-numbers" id="AdditionalIOPPerDay" value="0"> Additional IOP/Day (from other wallets/sources)
+</p>
+<p><button class="button bg-punks-2 text-light" id="actionShowTotals">Punks Collection Page - Show Metrics</button></p>
+
+<p><h2>Useful Links:</h2></p>
+<p>
+<a class="button bg-punks text-punks-gold" href="https://iotexpunks.com/#/iotxpunks" target="_blank">Punks Collection</a>
+<a class="button bg-punks text-punks-gold" href="https://iotexpunks.com/#/market" target="_blank">Punks Marketplace</a>
+</p>
+<p>
+<a class="button bg-punks text-punks-gold" href="https://t.me/iotexpunks" target="_blank">Punks Telegram</a>
+<a class="button bg-punks text-punks-gold" href="https://discord.gg/JBZ882NH6C" target="_blank">Punks Discord</a><br /><br />
+<a class="button bg-machinel-outline text-machinelands" href="https://machinelands.com/" target="_blank">MachineLands</a>
+<a class="button bg-machinel-outline text-machinelands" href="https://supercozy.io/" target="_blank">SuperCozy Marketplace</a>
+</p>
+
+<p>
+<a class="button bg-mimo text-dark" href="https://v2.info.mimo.exchange/token/0x985478eaca15464ad6968409e3e8a8b7c1675ae4" target="_blank">IOP Charts</a>
+<a class="button bg-mimo text-dark" href="https://swap.mimo.exchange/#/swap?inputCurrency=0x985478eaca15464ad6968409e3e8a8b7c1675ae4" target="_blank">IOP Swap</a>
+<a class="button bg-mimo text-dark" href="https://swap.mimo.exchange/#/add/IOTX/0x985478EaCa15464aD6968409e3E8a8b7c1675Ae4" target="_blank">Add Liquidity IOP/IOTX</a>
+</p>
+
+<p>
+<table>
+  <tr>
+    <td>Punks Contract (io):</td>
+    <td><a href="https://iotexscan.io/address/io1eccqkq92nsrx0pkkp87fv55ahmd2xzmkxpt677" target="_blank">io1eccqkq92nsrx0pkkp87fv55ahmd2xzmkxpt677</a></td>
+  </tr>
+  <tr>
+    <td>Punks Contract (0x):</td>
+    <td><a href="https://iotexscan.io/address/0xce300b00aa9c066786d609fc96529dbedaa30b76" target="_blank">0xce300b00aa9c066786d609fc96529dbedaa30b76</a></td>
+  </tr>
+  <tr>
+    <td>IOP Contract (io):</td>
+    <td><a href="https://iotexscan.io/address/io1np2836k2z4ry445kssy7869gklqkwkhyfmfsm2" target="_blank">io1np2836k2z4ry445kssy7869gklqkwkhyfmfsm2</a></td>
+  </tr>
+  <tr>
+    <td>IOP Contract (0x):</td>
+    <td><a href="https://iotexscan.io/address/0x985478eaca15464ad6968409e3e8a8b7c1675ae4" target="_blank">0x985478eaca15464ad6968409e3e8a8b7c1675ae4</a></td>
+  </tr>
+</table>
+</p>
+
+<p><h2>Want to Support this Extension?</h2></p>
+<p>Wallet for Donations (io): <a href="https://iotexscan.io/address/io1mesq7c8zk484khlykzz4gvq7ccnt4gwzzsnh7x" target="_blank">io1mesq7c8zk484khlykzz4gvq7ccnt4gwzzsnh7x</a><br />
+Wallet for Donations (0x): <a href="https://iotexscan.io/address/0xDe600F60E2B54f5B5fE4B08554301Ec626BAa1C2" target="_blank">0xDe600F60E2B54f5B5fE4B08554301Ec626BAa1C2</a>
+</p>
+
+<div class="hidden" id="token_data"></div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/popup.js"></script>
+
+</body>
+</html>
